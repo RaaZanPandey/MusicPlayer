@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<div class="container bg-black">
+    <div class="left">
+        <div class="home bg-gray rounded m-1 p-1">
+            <div class="logos">
+                <div><i class="ri-music-2-fill"></i></div>
+                <div class="close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <ul>
+                <li><i class="ri-home-fill"></i>Home</li>
+                <li><i class="ri-search-line"></i>Search</li>
+            </ul>
+
+
+        </div>
+        <div class="library bg-gray rounded m-1 p-1">
+            <div class="heading">
+                <img class="invert" src="library.svg" alt="">
+                <h2>Your Library</h2>
+
+            </div>
+            <div class="SongList">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right  bg-gray rounded">
+        <div class="header">
+            <div class="nav display-flex">
+                <div class="hamberger">
+                    <i class="ri-menu-line"></i>
+                </div>
+                <i class="ri-arrow-left-wide-fill"></i>
+                <i class="ri-arrow-right-wide-fill"></i>
+            </div>
+            <div class="button">
+                <button class="signupbtn">Sign up</button>
+                <button class="loginbtn">Log in</button>
+            </div>
+        </div>
+        <div class="music-playlist">
+            <h1>Music Player</h1>
+            <div class="cardContainer">
+                
+            </div>
+            <div class="playBar">
+                <div class="songData">
+                    <div class="songInfo">
+                        <p>The song is not yet selected</p>
+                    </div>
+                    <div class="songbuttons">
+                        <i class="ri-skip-left-line"></i>
+                        <i id="PlayButton" class="ri-play-circle-line"></i>
+                        <i class="ri-skip-right-line"></i>
+                    </div>
+                    <input type="range" id="progress">
+                    <div class="songTime">
+                        <p>00:00 / 00:00</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    </body>
+
+</html>
