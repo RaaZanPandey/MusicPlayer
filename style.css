@@ -5,11 +5,9 @@
 
 .container {
     display: flex;
-
 }
 
-html,
-body {
+html, body {
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -130,12 +128,13 @@ body {
 }
 
 .card {
+    height: 255px;
     width: 200px;
-    padding: 10px;
     border-radius: 5px;
     background-color: #252525;
     position: relative;
 }
+
 
 .play {
     display: flex;
@@ -164,15 +163,20 @@ body {
 }
 
 
-.card>* {
-    padding-top: 10px;
-}
+
 
 .card img {
+    margin: 0px;
     width: 100%;
-    object-fit: contain;
+    height: 70%;
+    object-fit: cover;
 }
-
+ .FolderInfo{
+    display: flex;
+    flex-direction: column;
+    line-height: 32px;
+    align-items: center;
+ }
 .button>* {
     margin: 0 12px;
 }
@@ -215,7 +219,7 @@ body {
     bottom: 30px;
     background: #25414c;
     height: 60px;
-    border-radius: 47px;
+    border-radius: 10px;
     width: 90%;
     padding: 10px;
     justify-content: center;
@@ -331,11 +335,18 @@ body {
     bottom: 9px;
     height: 20px;
     display: block;
+    border: 2px solid white;
 }
 
 
 
 @media (max-width : 769px) {
+    .container {
+        max-width: 600px;   
+        margin: 0 auto;   
+        padding: 20px;
+    }
+    
     .left {
         border-radius: 10px;
         left: -110%;
@@ -391,7 +402,11 @@ body {
         height: 360px;
         margin-left: 2px;
     }
-
+    .card img{
+        height: 78%;
+        width: 100%;
+        object-fit: cover;
+    }
     .songData {
         flex-wrap: wrap;
         height: 118px;
