@@ -55,6 +55,7 @@ let isPlaying = false;
 let playButton = document.getElementById("PlayButton");
 
 function PlayMusic(track) {   //THIS FUNCTION IS TO PLAY SONG ON THE LIST IT ACCEPT THE SOGS ITSELF
+    document.querySelector(".playBar").style.border = "2px solid aqua";
     currentSong.src = track;
     currentSong.play();
     isPlaying = true;
@@ -76,8 +77,10 @@ function PlaySong(array) {   //THIS FUNCTION IS TO PLAY THE SONG BY CLICKILING O
 PlaySong(CurrentIndex);   //THIS IS TO PLAY THE FIRST SONG IF THE PARTICULAR SONG IS NOT SELECTED YET
 
 
+
 playButton.onclick = () => {  //THIS IS TO CHNAGE THS ICON OF PLAYBUTTON AND TO PLAY AND PAUSE THE SONGS
     if (isPlaying) {
+        document.querySelector(".playBar").style.border = "2px solid gray";
         currentSong.pause();
         isPlaying = false;
         playButton.classList.remove("ri-pause-circle-line");
@@ -85,6 +88,7 @@ playButton.onclick = () => {  //THIS IS TO CHNAGE THS ICON OF PLAYBUTTON AND TO 
     }
     else {
         currentSong.play();
+        document.querySelector(".playBar").style.border = "2px solid aqua";
         isPlaying = true;
         playButton.classList.remove("ri-play-circle-line");
         playButton.classList.add("ri-pause-circle-line");
