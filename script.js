@@ -119,9 +119,7 @@ currentSong.addEventListener("timeupdate", () => { //THIS IS TO UPDATE THE PROGR
 
 })
 
-// function color(array){
-//     array[CurrentIndex].style.backgroundColor = "yellow";
-// }
+
 
 function next(array){
     CurrentIndex += 1;
@@ -174,6 +172,16 @@ function PassSong(file){    //ACCEPT ARRAY OF SONG AND PASS SPECIFIC SONG FROM A
         });
     });
 }
+document.querySelectorAll(".card").forEach(e=>{
+    e.addEventListener("click", ()=>{
+        document.querySelectorAll(".card").forEach(i=>{
+            i.style.backgroundColor = "";
+            i.style.border = "";
+        })
+        e.style.backgroundColor = "#25414c";
+        e.style.border = "2px solid aqua";
+    })
+})
 
 document.getElementsByClassName("card")[0].addEventListener("click", ()=>{
     InsertSong(songs);
